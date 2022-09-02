@@ -128,6 +128,11 @@ button {
   color: var(--mercury);
   padding: 10px;
   border: 1px solid var(--mercury);
+  transition: all 0.2s ease-in-out;
+}
+button._copied {
+  color: var(--codGray);
+  background-color: var(--mercury);
 }
 
 .buttons {

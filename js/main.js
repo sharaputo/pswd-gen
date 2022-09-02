@@ -21,8 +21,11 @@ window.addEventListener("DOMContentLoaded", () => {
     passwordInput.select();
     navigator.clipboard.writeText(passwordInput.value);
     copyBtn.innerHTML = "Copied";
+    copyBtn.classList.add("_copied");
+
     setTimeout(() => {
       copyBtn.innerHTML = "Copy";
+      copyBtn.classList.remove("_copied");
     }, 1000);
   }
 
