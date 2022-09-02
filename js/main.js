@@ -20,6 +20,10 @@ window.addEventListener("DOMContentLoaded", () => {
   function copyPassword() {
     passwordInput.select();
     navigator.clipboard.writeText(passwordInput.value);
+    copyBtn.innerHTML = "Copied";
+    setTimeout(() => {
+      copyBtn.innerHTML = "Copy";
+    }, 1000);
   }
 
   genBtn.addEventListener("click", genPassword);
