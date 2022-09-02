@@ -130,7 +130,7 @@ button {
   border: 1px solid var(--mercury);
   transition: all 0.2s ease-in-out;
 }
-button._copied {
+button._active {
   color: var(--codGray);
   background-color: var(--mercury);
 }

@@ -15,18 +15,26 @@ window.addEventListener("DOMContentLoaded", () => {
       password += chars.substring(randomNumber, randomNumber + 1);
       passwordInput.value = password;
     }
+
+    genBtn.innerHTML = "Generated";
+    genBtn.classList.add("_active");
+
+    setTimeout(() => {
+      genBtn.innerHTML = "Generate";
+      genBtn.classList.remove("_active");
+    }, 500);
   }
 
   function copyPassword() {
     passwordInput.select();
     navigator.clipboard.writeText(passwordInput.value);
     copyBtn.innerHTML = "Copied";
-    copyBtn.classList.add("_copied");
+    copyBtn.classList.add("_active");
 
     setTimeout(() => {
       copyBtn.innerHTML = "Copy";
-      copyBtn.classList.remove("_copied");
-    }, 1000);
+      copyBtn.classList.remove("_active");
+    }, 500);
   }
 
   genBtn.addEventListener("click", genPassword);
