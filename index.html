@@ -19,7 +19,31 @@
     <section class="gen">
 
       <div class="container">
-        <h1>Random password generator</h1>
+        <h1>password generator</h1>
+
+        <fieldset>
+          <ul class="chars">
+            <li class="char">
+              <label for="12">
+                <input type="radio" name="chars" value="12" class="radio" id="12" checked>
+                <span>12</span>
+              </label>
+            </li>
+            <li class="char">
+              <label for="14">
+                <input type="radio" name="chars" value="14" class="radio" id="14">
+                <span>14</span>
+              </label>
+            </li>
+            <li class="char">
+              <label for="16">
+                <input type="radio" name="chars" value="16" class="radio" id="16">
+                <span>16</span>
+              </label>
+            </li>
+          </ul>
+          <h2 id="length">(password length is 12)</h2>
+        </fieldset>
 
         <input type="text" id="password" placeholder="your password" readonly>
 

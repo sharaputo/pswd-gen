@@ -60,13 +60,13 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
 :root {
   font-size: 16px;
-  --fontFamily: Verdana, Helvetica, "Trebuchet MS", Tahoma, sans-serif;
+  --fontFamily: Verdana, Helvetica, 'Trebuchet MS', Tahoma, sans-serif;
   --codGray: #131313;
   --mercury: #e2e2e2;
   --silver: #bbbbbb;
@@ -88,7 +88,7 @@ body {
 }
 
 main {
-  padding-top: 100px;
+  padding-top: 85px;
 }
 
 .container {
@@ -102,16 +102,64 @@ h1 {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: -0.05em;
-  color: var(--swirl);
+  color: var(--silver);
   margin-bottom: 30px;
 }
 
-input {
+fieldset {
+  padding: 10px;
+  border: 1px solid var(--silver);
+  margin-bottom: 30px;
+}
+
+fieldset ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+fieldset li {
+  list-style: none;
+}
+
+fieldset label {
+  position: relative;
+}
+
+fieldset input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+fieldset label span {
+  display: block;
+  padding: 5px;
+}
+
+fieldset input:checked + span {
+  color: var(--codGray);
+  background-color: var(--silver);
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+  color: var(--silver);
+  margin-top: 10px;
+}
+
+input[type='text'] {
   display: block;
   width: 100%;
-  max-width: 220px;
+  max-width: 240px;
   font-family: var(--fontFamily);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   text-align: center;
   color: var(--mercury);
   padding: 10px;
@@ -121,9 +169,8 @@ input {
 }
 
 button {
-  width: 150px;
   font-family: var(--fontFamily);
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-align: center;
   color: var(--mercury);
   padding: 10px;
@@ -137,9 +184,10 @@ button._active {
 
 .buttons {
   max-width: 400px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
   margin: 50px auto 0;
 }
 
@@ -153,18 +201,23 @@ button._active {
     margin-bottom: 50px;
   }
 
-  input {
-    max-width: 250px;
+  fieldset {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  input[type='text'] {
+    max-width: 300px;
     font-size: 1.5rem;
   }
 
   button {
-    width: 200px;
     font-size: 1.5rem;
     padding: 15px;
   }
 
   .buttons {
     max-width: 500px;
+    gap: 30px;
   }
 }
